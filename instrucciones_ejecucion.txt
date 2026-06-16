@@ -6,7 +6,8 @@ REQUISITOS PREVIOS
 - Python 3.10 o superior
 - Instalar dependencias:  pip install -r requirements.txt
 - Instalar Playwright:    playwright install chromium
-
+- Instalar Github Copilot en modo agente IA
+- Seleccionar como agente Claude Sonnet 4.6
 
 PASOS PARA MIGRAR UNA PÁGINA
 -----------------------------
@@ -17,15 +18,14 @@ PASOS PARA MIGRAR UNA PÁGINA
 
 2. Abre la carpeta migrador-confluence-easydoc en Visual Studio Code.
 
-3. Guarda la página Confluence como HTML completo (Ctrl+S en el navegador)
+3. Guarda la página Confluence que quieres migrar como HTML completo (Ctrl+S en el navegador)
    con el nombre  origen.html  dentro de la carpeta  input/
    (NO modifiques ni borres el fichero destino.html que ya está en input/)
 
-4. En Visual Studio Code instala la extensión GitHub Copilot.
-   Asegúrate de dejar marcada la opción "Bypass Approvals" en la configuración
-   del agente de Copilot.
+4. En Visual Studio Code asegúrate de dejar marcada la opción "Bypass Approvals" 
+   en la configuración del agente de Copilot.
 
-5. Abre el panel de chat de GitHub Copilot (modo Agente) y escribe:
+5. Abre el panel de chat de GitHub Copilot y escribe:
 
        migrar url
 
