@@ -23,7 +23,7 @@ PASOS PARA MIGRAR UNA PÁGINA
 3. En Visual Studio Code asegúrate de dejar marcada la opción "Bypass Approvals" 
    en la configuración del agente de Copilot.
 
-5. Abre el panel de chat de GitHub Copilot y escribe:
+4. Abre el panel de chat de GitHub Copilot y escribe:
 
        migrar url
 
@@ -33,7 +33,7 @@ PASOS PARA MIGRAR UNA PÁGINA
      · subir_imagenes.py  → sube las imágenes al media manager de EasyDoc
      · pegar_en_editor.py → abre el editor EasyDoc y pega el contenido
 
-6. Cuando el navegador abra el editor de EasyDoc con el contenido pegado,
+5. Cuando el navegador abra el editor de EasyDoc con el contenido pegado,
    revisa el resultado y pulsa PUBLISH o SAVE DRAFT.
 
 
