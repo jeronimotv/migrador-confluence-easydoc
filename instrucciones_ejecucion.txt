@@ -1,0 +1,49 @@
+MIGRADOR CONFLUENCE → EASYDOC
+==============================
+
+REQUISITOS PREVIOS
+------------------
+- Python 3.10 o superior
+- Instalar dependencias:  pip install -r requirements.txt
+- Instalar Playwright:    playwright install chromium
+
+
+PASOS PARA MIGRAR UNA PÁGINA
+-----------------------------
+
+1. Descarga el repositorio:
+   git clone https://github.com/jeronimotv/migrador-confluence-easydoc
+   (o descárgalo como ZIP desde GitHub y descomprímelo)
+
+2. Abre la carpeta migrador-confluence-easydoc en Visual Studio Code.
+
+3. Guarda la página Confluence como HTML completo (Ctrl+S en el navegador)
+   con el nombre  origen.html  dentro de la carpeta  input/
+   (NO modifiques ni borres el fichero destino.html que ya está en input/)
+
+4. En Visual Studio Code instala la extensión GitHub Copilot.
+   Asegúrate de dejar marcada la opción "Bypass Approvals" en la configuración
+   del agente de Copilot.
+
+5. Abre el panel de chat de GitHub Copilot (modo Agente) y escribe:
+
+       migrar url
+
+   El agente ejecutará automáticamente los cuatro pasos de migración:
+     · main.py           → extrae contenido, imágenes y adjuntos de origen.html
+     · adaptar_estilos.py → aplica los estilos del portal destino
+     · subir_imagenes.py  → sube las imágenes al media manager de EasyDoc
+     · pegar_en_editor.py → abre el editor EasyDoc y pega el contenido
+
+6. Cuando el navegador abra el editor de EasyDoc con el contenido pegado,
+   revisa el resultado y pulsa PUBLISH o SAVE DRAFT.
+
+
+NOTAS
+-----
+- La primera ejecución pedirá autenticación SSO en el navegador.
+  Las sesiones siguientes se reutilizan automáticamente (auth.json).
+- Las imágenes se suben al media manager público de EasyDoc.
+- Los adjuntos se copian a la carpeta output/adjuntos/ para subirlos
+  manualmente si fuera necesario.
+- Para cambiar la URL del portal destino u otras opciones, edita config.py.

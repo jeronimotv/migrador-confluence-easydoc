@@ -1,0 +1,19 @@
+# Ficheros generados durante la migración
+output/
+
+# Página origen (el usuario la pone manualmente en cada migración)
+input/origen.html
+input/origen_files/
+
+# Sesión de autenticación (contiene tokens)
+auth.json
+
+# Descargas y temporales
+downloads/
+temp/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
